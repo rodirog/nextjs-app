@@ -3,25 +3,42 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --white: #fff;
+  --black: #000;
+  --main-color: #023047;
+  --secondary-color: #FA8400;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+body,
+div {
+  background-color: var(--main-color);
+  color: var(--white);
+}
+
+p {
+  font-family: var(--font-montserrat);
+  font-size: 1.25rem
+}
+
+h1 {
+  font-family: var(--font-press-start-2p);
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+
+span {
+  color: white;
+}
+
+button {
+  font-family: var(--font-montserrat);
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  font-size: 1.25rem;
 }
