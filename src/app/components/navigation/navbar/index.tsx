@@ -7,7 +7,7 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
   return (
     <>
       <div className="w-full h-36 sticky top-0">
-        <div className="container mx-auto px-24 h-full">
+        <div className="px-10 lg:px-24 h-full">
           <div className="flex justify-between items-center h-full">
             <div className="flex flex-row items-center gap-3.5">
               <Logo />
