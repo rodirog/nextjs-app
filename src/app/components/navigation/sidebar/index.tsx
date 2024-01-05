@@ -10,7 +10,7 @@ const Sidebar = ({
   return (
     <>
       <div
-        className="sidebar-container fixed w-full h-full overflow-hidden justify-center bg-white grid pt-[120px] left-0 z-10"
+        className="sidebar-container fixed w-full h-full overflow-hidden justify-center grid pt-[120px] left-0 z-10"
         style={{
           opacity: `${isOpen ? '1' : '0'}`,
           top: ` ${isOpen ? '0' : '-100%'}`,
@@ -33,18 +33,23 @@ const Sidebar = ({
 
         <ul className="sidebar-nav text-center leading-relaxed text-xl">
           <li>
+            <Link href="/games" onClick={toggle}>
+              <p>Jogos</p>
+            </Link>
+          </li>
+          <li>
             <Link href="/about" onClick={toggle}>
-              <p>About Us</p>
+              <p>Sobre</p>
             </Link>
           </li>
           <li>
-            <Link href="/services" onClick={toggle}>
-              <p>Services</p>
+            <Link href="/blog" onClick={toggle}>
+              <p>Blog</p>
             </Link>
           </li>
           <li>
-            <Link href="/contacts" onClick={toggle}>
-              <p>Contacts</p>
+            <Link href="/contact" onClick={toggle}>
+              <p>Contato</p>
             </Link>
           </li>
         </ul>

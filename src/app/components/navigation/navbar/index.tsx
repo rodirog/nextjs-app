@@ -11,7 +11,7 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
           <div className="flex justify-between items-center h-full">
             <div className="flex flex-row items-center gap-3.5">
               <Logo />
-              <h1>
+              <h1 className="hidden lg:block">
                 <span>J</span>O<span>J</span>OS
               </h1>
             </div>
