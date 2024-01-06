@@ -4,7 +4,7 @@ interface Props {
   imageSource: StaticImageData
 }
 
-const GameGridCard = ({ imageSource }: Props) => {
+const GameCard = ({ imageSource }: Props) => {
   return (
     <div className={'sm:flex-1 h-48 lg:h-72'}>
       <Image
@@ -17,4 +17,4 @@ const GameGridCard = ({ imageSource }: Props) => {
   )
 }
 
-export default GameGridCard
+export default GameCard

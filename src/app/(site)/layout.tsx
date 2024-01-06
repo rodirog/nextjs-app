@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 // eslint-disable-next-line camelcase
 import { Montserrat, Press_Start_2P } from 'next/font/google'
-import './globals.css'
+import '../globals.css'
 import Navigation from './components/navigation'
 import Footer from './components/footer'
 
