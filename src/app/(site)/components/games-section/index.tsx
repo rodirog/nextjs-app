@@ -1,28 +1,39 @@
-import Image from 'next/image'
-import marioImage from '../../../../../public/images/mario.png'
-import pacmanImage from '../../../../../public/images/pacman.png'
-import spaceInvadersImage from '../../../../../public/images/space-invaders.png'
-import tetrisImage from '../../../../../public/images/tetris.png'
 import GameCard from '../game-card'
+import {
+  getFirstGameImageData,
+  getGameImagesData,
+} from '@/services/get-games-info'
+import { SanityImage } from '../sanity-image'
 
-const GamesSection = () => {
+export async function GamesSection() {
+  const firstGameImageData = await getFirstGameImageData()
+
+  const gameImagesData = await getGameImagesData()
+
   return (
     <>
       <div className={'sm:flex-row mb-5 h-48 lg:h-[31.2rem]'}>
-        <Image
-          src={pacmanImage}
+        <SanityImage
+          key={firstGameImageData.slug}
+          asset={firstGameImageData.gameImage.image}
           className={'w-full h-full'}
           style={{ objectFit: 'cover' }}
-          alt=""
-        />
+          alt={firstGameImageData.gameImage.alt}
+        ></SanityImage>
       </div>
-      <div className={'flex flex-col sm:flex-row gap-5'}>
-        <GameCard imageSource={spaceInvadersImage} />
-        <GameCard imageSource={tetrisImage} />
-        <GameCard imageSource={marioImage} />
+      <div className={'flex flex-col sm:flex-row flex-wrap gap-5'}>
+        {gameImagesData.map((imagesData) => {
+          return (
+            <>
+              <GameCard
+                key={imagesData.slug}
+                imageAsset={imagesData.gameImage.image}
+                alt={imagesData.gameImage.alt}
+              />
+            </>
+          )
+        })}
       </div>
     </>
   )
 }
-
-export default GamesSection

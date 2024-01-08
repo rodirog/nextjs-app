@@ -1,18 +1,21 @@
-import Image, { StaticImageData } from 'next/image'
+// { StaticImageData } from 'next/image'
+import { ImageAsset } from 'sanity'
+import { SanityImage } from '../sanity-image'
 
 interface Props {
-  imageSource: StaticImageData
+  imageAsset: ImageAsset
+  alt: string
 }
 
-const GameCard = ({ imageSource }: Props) => {
+const GameCard = ({ imageAsset, alt }: Props) => {
   return (
     <div className={'sm:flex-1 h-48 lg:h-72'}>
-      <Image
+      <SanityImage
         className={'w-full h-full'}
-        src={imageSource}
+        asset={imageAsset}
         style={{ objectFit: 'cover' }}
-        alt=""
-      />
+        alt={alt}
+      ></SanityImage>
     </div>
   )
 }
