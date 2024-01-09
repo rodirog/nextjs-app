@@ -1,0 +1,19 @@
+
+.content p {  
+  font-size: 14px;
+  text-align: justify;
+}    
+
+@media (min-width: 640px) {
+  .content p {
+    font-size: 16px;
+    text-align: start;
+  } 
+}   
+
+@media (min-width: 1024px) {
+  .content p {
+    font-size: 20px;
+    text-align: start;
+  } 
+}

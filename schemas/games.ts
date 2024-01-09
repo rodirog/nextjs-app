@@ -27,7 +27,7 @@ const games = {
     },
     {
       name: 'description',
-      title: 'Game Description',
+      title: 'About the Game',
       type: 'array',
       of: [{ type: 'block' }],
     },

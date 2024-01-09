@@ -1,6 +1,6 @@
 import client from '../../sanity.client'
 import { groq } from 'next-sanity'
-import { ImageAsset } from 'sanity'
+import { ImageAsset, PortableTextBlock } from 'sanity'
 
 type TFirstGameImageData = {
   gameImage: {
@@ -11,6 +11,12 @@ type TFirstGameImageData = {
 }
 
 type TGameImagesData = TFirstGameImageData
+
+type TGamesData = TGameImagesData & {
+  name: string
+  price: string
+  description: PortableTextBlock[]
+}
 
 export async function getFirstGameImageData(): Promise<TFirstGameImageData> {
   return await client.fetch<TFirstGameImageData>(
@@ -32,7 +38,22 @@ export async function getGameImagesData(): Promise<TGameImagesData[]> {
         _id,
         name,
         gameImage {alt, "image": asset},
-        slug
+        "slug": slug.current
+      }
+      `,
+  )
+}
+
+export async function getGamesData(): Promise<TGamesData[]> {
+  return await client.fetch<TGamesData[]>(
+    groq`
+      *[_type == 'games'] {
+        _id,
+        name,
+        gameImage {alt, "image": asset},
+        "slug": slug.current,
+        price,
+        description
       }
       `,
   )
