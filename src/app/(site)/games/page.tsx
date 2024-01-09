@@ -8,7 +8,11 @@ async function Games() {
     <>
       {gamesData.map((data) => {
         return (
-          <div key={data.slug} className={'mb-10 sm:mb-20 md:mb-24'}>
+          <div
+            id={data.slug}
+            key={data.slug}
+            className={'mb-10 sm:mb-20 md:mb-24'}
+          >
             <GameSection
               name={data.name}
               imageAsset={data.gameImage.image}
