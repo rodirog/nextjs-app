@@ -41,7 +41,7 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about">
+                  <Link href="/#about">
                     <p>Sobre</p>
                   </Link>
                 </li>
@@ -52,7 +52,9 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
                 </li>
               </ul>
               <div className="hidden md:block">
-                <Button text='Carreira' />
+                <Link href="/career">
+                  <Button text="Carreira" />
+                </Link>
               </div>
             </div>
           </div>

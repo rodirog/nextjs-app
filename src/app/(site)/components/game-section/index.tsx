@@ -26,7 +26,9 @@ const GameSection = ({ name, imageAsset, alt, price, description }: Props) => {
       <div className={'flex items-center gap-8 sm:gap-11 mt-5 mb-9'}>
         <div className={'lg:flex lg: gap-1'}>
           <p className={'text-sm sm:text-base lg:text-xl'}>Valor: </p>
-          <p className={'text-sm sm:text-base lg:text-xl whitespace-nowrap'}>R$ {price}</p>
+          <p className={'text-sm sm:text-base lg:text-xl whitespace-nowrap'}>
+            R$ {price}
+          </p>
         </div>
         <Button text="Comprar"></Button>
       </div>

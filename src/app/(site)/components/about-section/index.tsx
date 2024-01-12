@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const AboutSection = () => {
   return (
-    <div className={'mt-16 lg:mt-28'}>
+    <div id={'about'} className={'mt-16 lg:mt-28'}>
       <h1 className={'text-center text-xl sm:text-3xl md:text-4xl mb-4'}>
         Sobre nós
       </h1>
