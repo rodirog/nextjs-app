@@ -1,7 +1,10 @@
+import { CareerForm } from '../components/career-form'
+
 export default function Career() {
   return (
-    <div className="px-8 pt-5 sm:px-10 lg:px-24">
-      <h1 className={'text-center'}>Formulário de Vaga</h1>
+    <div className="pt-5">
+      <h1 className={'text-center text-xl sm:text-2xl lg:text-4xl mb-4 lg:mb-12'}>Formulário de Vaga</h1>
+      <CareerForm></CareerForm>
     </div>
   )
 }
