@@ -1,0 +1,18 @@
+.content p {  
+  font-size: 13px;
+  color: var(--pixel-grey);
+}    
+
+@media (min-width: 640px) {
+  .content p {
+    font-size: 16px;
+    text-align: start;
+  } 
+}   
+
+@media (min-width: 1024px) {
+  .content p {
+    font-size: 20px;
+    text-align: start;
+  } 
+}

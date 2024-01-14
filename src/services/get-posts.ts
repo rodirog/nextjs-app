@@ -16,8 +16,10 @@ export type TLastPostPreview = TPostPreview & {
   content: PortableTextBlock[]
 }
 
-export type TPost = {
-  title: string
+export type TPost = TLastPostPreview
+
+export type TSlug = {
+  slug: string
 }
 
 export async function getLastPostData(): Promise<TLastPostPreview> {
@@ -48,6 +50,33 @@ export async function getPostsPreviewData(): Promise<TPostPreview[]> {
         "image": postImage.asset ->
       } | order(_createdAt desc) 
     `,
+  )
+}
+
+export async function getPostBySlug(slug: string): Promise<TPost> {
+  return (
+    await client.fetch<TPost[]>(
+      groq`
+        *[_type == 'blog' && slug.current == '${slug}'] {
+          title,
+          content,
+          authors,
+          "publishedAt": date,
+          "altText": postImage.altText,
+          "image": postImage.asset ->,
+        }
+      `,
+    )
+  )[0]
+}
+
+export async function getPostsSlugs(): Promise<TSlug[]> {
+  return await client.fetch<TSlug[]>(
+    groq`
+      *[_type == 'blog'] {
+        "slug": slug.current,
+      }
+      `,
   )
 }
 
