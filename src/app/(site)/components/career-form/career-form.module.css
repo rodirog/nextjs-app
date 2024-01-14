@@ -1,9 +1,10 @@
-.form p {  
+.form p {
   color: var(--pixel-grey);
   font-size: 13px;
-}    
+}
 
-.form input, .form textarea {
+.form input,
+.form textarea {
   margin-bottom: 15px;
   background: none;
   border: 1px solid var(--pixel-grey);
@@ -25,7 +26,7 @@
   .form p {
     font-size: 14px;
     color: var(--pixel-grey);
-  } 
+  }
 
   .form input {
     height: 35px;
@@ -38,14 +39,15 @@
   .form button {
     margin-bottom: 125px;
   }
-}   
+}
 
 @media (min-width: 1024px) {
   .form p {
     color: var(--pixel-grey);
-  } 
+  }
 
-  .form input, .form textarea {
+  .form input,
+  .form textarea {
     margin-bottom: 30px;
     padding: 15px;
   }
@@ -68,7 +70,7 @@
   .form p {
     font-size: 20px;
     color: var(--pixel-grey);
-  } 
+  }
 
   .form label p {
     margin-bottom: 8px;
