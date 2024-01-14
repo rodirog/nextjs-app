@@ -13,7 +13,7 @@ export type TPostPreview = {
 export type TLastPostPreview = TPostPreview & {
   publishedAt: string
   authors: string[]
-  content: PortableTextBlock[]
+  content: any
 }
 
 export type TPost = TLastPostPreview
