@@ -79,23 +79,3 @@ export async function getPostsSlugs(): Promise<TSlug[]> {
       `,
   )
 }
-
-export async function getPostsData(slug: string): Promise<TPost> {
-  return (
-    await client.fetch<TPost[]>(
-      groq`
-        *[_type == 'blog' && slug.current == '${slug}'] {
-          title,
-          subtitle,
-          content,
-          authors,
-          "createdAt": date,
-          "updatedAt": _updatedAt,
-          "bannerAltText": banner.altText,
-          "bannerImage": banner.asset ->,
-          "bannerImageDescription": banner.bannerImageDescription,
-        }
-      `,
-    )
-  )[0]
-}
