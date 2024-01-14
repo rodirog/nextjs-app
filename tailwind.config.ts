@@ -15,6 +15,7 @@ const config: Config = {
       },
       colors: {
         'main-color': '#023047',
+        'pixel-grey': '#DFDFE4',
       },
     },
   },
