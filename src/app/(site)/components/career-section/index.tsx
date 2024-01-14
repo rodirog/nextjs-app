@@ -29,7 +29,11 @@ const CareerSection = () => {
       <h1 className={'text-center text-xl sm:text-3xl md:text-4xl mb-4'}>
         Carreira
       </h1>
-      <div className={'flex flex-col sm:grid sm:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-5'}>
+      <div
+        className={
+          'flex flex-col sm:grid sm:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-5'
+        }
+      >
         {cardsData.map((data) => {
           return (
             <CareerCard
