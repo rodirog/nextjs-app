@@ -6,11 +6,8 @@ import styles from './career-form.module.css'
 export function CareerForm() {
   const [isModalOpen, setModalOpen] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault()
-    // Add your form submission logic here
-
-    // Assuming the form is successfully submitted, open the modal
     setModalOpen(true)
   }
 
@@ -20,19 +17,19 @@ export function CareerForm() {
         className={'flex flex-col mx-8 sm:mx-32 md:mx-48 lg:mx-64 xl:mx-96'}
         onSubmit={handleSubmit}
       >
-        <label for="name">
+        <label htmlFor="name">
           <p>Nome</p>
         </label>
         <input id="name" name="name" type="text" required />
-        <label for="email">
+        <label htmlFor="email">
           <p>E-mail</p>
         </label>
         <input id="email" name="email" type="email" required />
-        <label for="portfolio">
+        <label htmlFor="portfolio">
           <p>Link para portfólio:</p>
         </label>
         <input id="portfolio" name="portfolio" type="url" required />
-        <label for="message">
+        <label htmlFor="message">
           <p>Por que você quer fazer parte da Jojos?</p>
         </label>
         <textarea id="message" name="message" required />
