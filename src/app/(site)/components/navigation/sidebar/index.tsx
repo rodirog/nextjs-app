@@ -38,7 +38,7 @@ const Sidebar = ({
             </Link>
           </li>
           <li>
-            <Link href="/about" onClick={toggle}>
+            <Link href="/#about" onClick={toggle}>
               <p>Sobre</p>
             </Link>
           </li>
@@ -48,7 +48,7 @@ const Sidebar = ({
             </Link>
           </li>
           <li>
-            <Link href="/contact" onClick={toggle}>
+            <Link href="/career" onClick={toggle}>
               <p>Contato</p>
             </Link>
           </li>
