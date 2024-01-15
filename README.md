@@ -1,17 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 💻 Project
+A responsive web application for a fictitious retro gaming company. 
+The design was created by [Pixel](https://ejpixel.com.br/).
 
-## Getting Started
+- Checkout the [live project](https://jojos-beta.vercel.app/)
 
-First, run the development server:
+## 🧪 Made using:
+
+- Next.js
+- Sanity CMS
+
+# Setup (Run locally)
+clone the repository
+```bash
+git clone https://github.com/rodirog/nextjs-spa.git
+```
+enter the project folder
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd nextjs-spa
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+download the dependencies
+```bash
+npm i
+```
+
+and run
+```bash
+npm run dev 
+```
+
+then acess http://localhost:3000
