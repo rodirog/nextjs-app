@@ -33,7 +33,7 @@ export function CareerForm() {
           <p>Por que você quer fazer parte da Jojos?</p>
         </label>
         <textarea id="message" name="message" required />
-        <Button text="Enviar formulário" type="submit"></Button>
+        <Button text="Enviar formulário"></Button>
         <CareerModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
       </form>
     </div>
