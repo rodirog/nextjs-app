@@ -3,7 +3,7 @@ import CareerCardTag from './career-card-tag'
 
 interface Props {
   title: string
-  tagsData: []
+  tagsData: string[]
 }
 
 const CareerCard = ({ title, tagsData }: Props) => {
