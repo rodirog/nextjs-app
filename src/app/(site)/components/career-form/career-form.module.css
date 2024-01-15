@@ -24,12 +24,17 @@
 
 @media (min-width: 640px) {
   .form p {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--pixel-grey);
   }
 
   .form input {
     height: 35px;
+    font-size: 16px;
+  }
+
+  .form textarea{
+    font-size: 16px;
   }
 
   .form label p {
@@ -54,11 +59,16 @@
 
   .form label p {
     margin-bottom: 4px;
+    font-size: 18px;
+  }
+
+  .form textarea{
+    font-size: 18px;
   }
 
   .form input {
     height: 45px;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .form button p {
@@ -80,6 +90,10 @@
     height: 55px;
     font-size: 20px;
     padding: 20px;
+  }
+
+  .form textarea{
+    font-size: 20px;
   }
 
   .form button p {

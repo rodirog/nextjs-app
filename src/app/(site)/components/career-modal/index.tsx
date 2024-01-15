@@ -2,7 +2,12 @@ import Image from 'next/image'
 import styles from './career-modal.module.css'
 import checkmarkImage from '../../../../../public/images/modal-checkmark.svg'
 
-const CareerModal = ({ isOpen, onClose }) => {
+interface Props {
+  isOpen: boolean
+  onClose: () => void
+}
+
+const CareerModal = ({ isOpen, onClose }: Props) => {
   if (!isOpen) return null
 
   return (
